@@ -12,7 +12,7 @@ class Character:
     return self.hp > 0
    
   def show_status(self):
-    print(f"{self.name}의 상태: HP {self.hp}")
+    print(f"{self.name}의 상태: HP {self.hp}, POWER {self.power}")
    
   def take_damage(self, damage):
     self.hp -= damage
@@ -36,6 +36,9 @@ class Enemy(Character):
     super().__init__(name, hp, power)
     # Enemy만의 추가 속성 (예: 현상금)
     self.bounty = bounty
+  # 메소드 오버라이딩
+  def show_status(self):
+    print(f"몬스터 {self.name}의 상태: HP {self.hp}")
    
 player = Player("용사", hp=200, power=15)
 monster = Enemy("드래곤", hp=150, power=20, bounty=500)
