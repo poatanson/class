@@ -12,7 +12,7 @@ class Character:
     return self.hp > 0
    
   def show_status(self):
-    print(f"{self.name}의 상태: HP {self.hp}, Power {self.power}")
+    print(f"{self.name}의 상태: HP {self.hp}")
    
   def take_damage(self, damage):
     self.hp -= damage
